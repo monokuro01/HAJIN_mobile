@@ -117,16 +117,16 @@ button {
         font-family: Arial black, sans-serif;
         font-weight: bold;
         margin-top: 10px;
-        font-size: 2em;
+        font-size: 1.8em;
     }
     button {
-        font-size: 0.9rem;
-        padding: 7.5px;
+        font-size: 0.8rem;
+        padding: 7.2px;
     }
     .board {
         width: 95vw;
     }
     .captured-box {
-        font-size: 1em;
+        font-size: 1.3em;
     }
 }
