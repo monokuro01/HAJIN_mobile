@@ -114,7 +114,7 @@ button {
 /* モバイル向けのスタイル調整 */
 @media (max-width: 600px) {
     h1 {
-        font-size: 1.2em;
+        font-size: 2em;
     }
     button {
         font-size: 0.9rem;
