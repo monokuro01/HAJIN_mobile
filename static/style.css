@@ -114,11 +114,14 @@ button {
 /* モバイル向けのスタイル調整 */
 @media (max-width: 600px) {
     h1 {
+        font-family: Arial black, sans-serif;
+        font-weight: bold;
+        margin-top: 10px;
         font-size: 2em;
     }
     button {
         font-size: 0.9rem;
-        padding: 8px;
+        padding: 7.5px;
     }
     .board {
         width: 95vw;
