@@ -1,0 +1,132 @@
+/* 一般的なスタイル設定 */
+body {
+    font-family: Arial Black, sans-serif;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: arial black, sans-serif;
+    color: black;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+.controls {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#undo-btn {
+    background-color: #ff6666;
+    color: white;
+}
+
+#pass-btn {
+    background-color: #6699ff;
+    color: white;
+}
+
+/* 盤面を中央に配置し、スクリーンに収まるよう調整 */
+.board-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    background-color: #ccc;
+    width: 90vw;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+    margin: auto;
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #444;
+    display: flex;
+    border: 1.5px white;  /* 少し落ち着いた枠線 */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(160deg, #DBDBDB, #C9C9C9);
+    box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.6),
+                inset -1px -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.stone {
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    position: absolute;
+}
+/* 赤い駒のスタイル */
+.red-stone {
+    background: radial-gradient(circle at 30% 30%, #FF7777, #DD2222);
+    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.4),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+                0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 青い駒のスタイル */
+.blue-stone {
+    background: radial-gradient(circle at 30% 30%, #84B2FF, #2255DD);
+    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.4),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+                0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 取った駒の数を表示 */
+.captured-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* モバイル向けのスタイル調整 */
+@media (max-width: 600px) {
+    h1 {
+        font-family: Arial black, sans-serif;
+        font-weight: bold;
+        margin-top: 10px;
+        font-size: 1.8em;
+    }
+    button {
+        font-size: 0.8rem;
+        padding: 7.2px;
+    }
+    .board {
+        width: 95vw;
+    }
+    .captured-box {
+        font-size: 1.1em;
+    }
+}
